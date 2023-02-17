@@ -3,8 +3,8 @@ import streamlit as st
 import pandas as pd
 
 #Loading up the Regression model we created
-model = RandomForestClassifier()
-model.load_model('joblib_model.pkl')
+model = joblib.load('joblib_model.pkl')
+
 
 #Caching the model for faster loading
 @st.cache
