@@ -19,7 +19,7 @@ st.header('Enter the characteristics of the Client:')
 
 Age = st.number_input('Client Age:', min_value=0.1, max_value=100.0, value=1.0)
 Total_Purchase = st.number_input('Total_Purchase:', min_value=0.1, max_value=100000.0, value=1.0)
-Account_Manager = st.number_input('Account_Manager:', min_value=0, max_value=1, value=1.0)
+Account_Manager = st.number_input('Account_Manager:', min_value=0.0, max_value=1.0, value=1.0)
 Years = st.number_input('Years:', min_value=0.1, max_value=1000.0, value=1.0)
 Num_Sites = st.number_input('Num_Sites:', min_value=0.1, max_value=10000.0, value=1.0)
 
