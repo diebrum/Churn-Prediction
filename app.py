@@ -14,7 +14,7 @@ def predict(Age,Total_Purchase,Account_Manager,Years,Num_Sites):
     return churn_pred
 
 st.title('Churn Predictor')
-st.image("https://neilpatel.com/wp-content/uploads/2019/06/ilustracao-do-titulo-churn-rate-e-simbolos-relacio-1.jpeg",width=700)
+st.image("https://neilpatel.com/wp-content/uploads/2019/06/ilustracao-do-titulo-churn-rate-e-simbolos-relacio-1.jpeg",width=700,height=200)
 st.header('Enter the characteristics of the Client:')
 
 Age = st.number_input('Client Age:', min_value=0.1, max_value=100.0, value=1.0)
