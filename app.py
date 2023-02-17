@@ -8,10 +8,10 @@ model.load_model('xgb_model.json')
 
 #Caching the model for faster loading
 @st.cache
-def predict(Age,Total_Purchase,Account_Manager,Years,Num_Sites):   
-
+def predict(Age,Total_Purchase,Account_Manager,Years,Num_Sites): 
     churn_pred = model.predict(pd.DataFrame([[Age,Total_Purchase,Account_Manager,Years,Num_Sites]], columns=['Age','Total_Purchase','Account_Manager','Years,Num_Sites']))
     return churn_pred
+
 st.title('Churn Detector')
 st.image("""https://www.thestreet.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cq_auto:good%2Cw_1200/MTY4NjUwNDYyNTYzNDExNTkx/why-dominion-diamonds-second-trip-to-the-block-may-be-different.png""")
 st.header('Enter the characteristics of the Client:')
@@ -24,4 +24,4 @@ Num_Sites = st.number_input('Num_Sites:', min_value=0.1, max_value=10000.0, valu
 
 if st.button('Predict Price'):
     churn = predict(Age,Total_Purchase,Account_Manager,Years,Num_Sites)
-    st.success(f'The client churn probability is '+churn)
+    st.success(churn)
