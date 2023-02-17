@@ -1,10 +1,10 @@
-import xgboost as xgb
+from sklearn.ensemble import RandomForestClassifier
 import streamlit as st
 import pandas as pd
 
 #Loading up the Regression model we created
-model = xgb.XGBRegressor()
-model.load_model('xgb_model.json')
+model = RandomForestClassifier()
+model.load_model('joblib_model.pkl')
 
 #Caching the model for faster loading
 @st.cache
