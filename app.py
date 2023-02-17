@@ -1,6 +1,7 @@
 from sklearn.ensemble import RandomForestClassifier
 import streamlit as st
 import pandas as pd
+import joblib
 
 #Loading up the Regression model we created
 model = joblib.load('joblib_model.pkl')
