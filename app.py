@@ -2,7 +2,7 @@ from sklearn.ensemble import RandomForestClassifier
 import streamlit as st
 import pandas as pd
 import joblib
-from PIL import image 
+from PIL import Image 
 
 #Loading up the Regression model we created
 model = joblib.load('joblib_model.pkl')
