@@ -23,7 +23,7 @@ Account_Manager = st.number_input('Account_Manager:', min_value=0.0, max_value=1
 Years = st.number_input('Years:', min_value=0.1, max_value=1000.0, value=1.0)
 Num_Sites = st.number_input('Num_Sites:', min_value=0.1, max_value=10000.0, value=1.0)
 
-if st.button('Predict Price'):
+if st.button('Predict Churn'):
     churn = predict(Age,Total_Purchase,Account_Manager,Years,Num_Sites)
     if churn==0:
         st.success("No Churn!")
