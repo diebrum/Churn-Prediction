@@ -14,7 +14,7 @@ def predict(Age,Total_Purchase,Account_Manager,Years,Num_Sites):
     return churn_pred
 
 st.title('Churn Predictor')
-st.image("""""")
+st.image("""https://github.com/diebrum/Churn-Prediction/blob/main/churn.png""")
 st.header('Enter the characteristics of the Client:')
 
 Age = st.number_input('Client Age:', min_value=0.1, max_value=100.0, value=1.0)
