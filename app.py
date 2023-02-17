@@ -1,4 +1,4 @@
-from sklearn import xgboost as xgb
+import xgboost as xgb
 import streamlit as st
 import pandas as pd
 
