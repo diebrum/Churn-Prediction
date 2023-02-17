@@ -2,14 +2,10 @@ from sklearn.ensemble import RandomForestClassifier
 import streamlit as st
 import pandas as pd
 import joblib
-from PIL import Image 
-import urllib.request
 
 #Loading up the Regression model we created
 model = joblib.load('joblib_model.pkl')
-urllib.request.urlretrieve( 'https://github.com/diebrum/Churn-Prediction/edit/main/churn.png,
-   "gfg.png")
-image=Image.open("gfg.png")
+
 
 #Caching the model for faster loading
 @st.cache
@@ -18,7 +14,7 @@ def predict(Age,Total_Purchase,Account_Manager,Years,Num_Sites):
     return churn_pred
 
 st.title('Churn Predictor')
-st.image(image,width=350)
+st.image("https://neilpatel.com/wp-content/uploads/2019/06/ilustracao-do-titulo-churn-rate-e-simbolos-relacio-1.jpeg",width=350)
 st.header('Enter the characteristics of the Client:')
 
 Age = st.number_input('Client Age:', min_value=0.1, max_value=100.0, value=1.0)
