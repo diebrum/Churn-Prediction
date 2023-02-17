@@ -14,7 +14,7 @@ def predict(Age,Total_Purchase,Account_Manager,Years,Num_Sites):
     return churn_pred
 
 st.title('Churn Detector')
-st.image("""https://www.google.com/url?sa=i&url=http%3A%2F%2Fmarcusmarques.com.br%2Fclientes%2Fentenda-por-que-metrica-churn-rate-e-tao-importante-para-seus-negocios%2F&psig=AOvVaw1axqgDz4rjBtJCZdkEv6o4&ust=1676690922622000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOjb1fDPm_0CFQAAAAAdAAAAABAD""")
+st.image("""https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.lumis.com.br%2Fdata%2Ffiles%2FA0%2F86%2F3B%2F8D%2F1059B61043F8EBA68E0BF9C2%2Fartigo__churn-rate__interna-03.png&imgrefurl=https%3A%2F%2Fwww.lumis.com.br%2Fa-lumis%2Fblog%2Fchurn-rate-saiba-o-que-e-e-como-diminuir-essa-taxa.htm&tbnid=cVwQ1R6DPBBCGM&vet=12ahUKEwjfj6nCz5v9AhVTTLgEHe9XDbwQMygEegUIARCSAQ..i&docid=1mfR2RfneDlpYM&w=334&h=259&q=churn.png""")
 st.header('Enter the characteristics of the Client:')
 
 Age = st.number_input('Client Age:', min_value=0.1, max_value=100.0, value=1.0)
