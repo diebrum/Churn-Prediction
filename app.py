@@ -25,4 +25,8 @@ Num_Sites = st.number_input('Num_Sites:', min_value=0.1, max_value=10000.0, valu
 
 if st.button('Predict Price'):
     churn = predict(Age,Total_Purchase,Account_Manager,Years,Num_Sites)
-    st.success(churn)
+    if churn==0:
+        st.success("No Churn!")
+    else:
+        st.success("Churn!")
+    
