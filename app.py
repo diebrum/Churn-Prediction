@@ -3,10 +3,13 @@ import streamlit as st
 import pandas as pd
 import joblib
 from PIL import Image 
+import urllib.request
 
 #Loading up the Regression model we created
 model = joblib.load('joblib_model.pkl')
-image=Image.open('https://github.com/diebrum/Churn-Prediction/edit/main/churn.png')
+urllib.request.urlretrieve( 'https://github.com/diebrum/Churn-Prediction/edit/main/churn.png,
+   "gfg.png")
+image=Image.open("gfg.png")
 
 #Caching the model for faster loading
 @st.cache
