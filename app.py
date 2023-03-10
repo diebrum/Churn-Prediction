@@ -5,10 +5,12 @@ import joblib
 
 #Loading up the Regression model we created
 
+
 model = joblib.load('joblib_model.pkl')
 
 
 #Caching the model for faster loading
+
 @st.cache
 def predict(Age,Total_Purchase,Account_Manager,Years,Num_Sites): 
     churn_pred = model.predict(pd.DataFrame([[Age,Total_Purchase,Account_Manager,Years,Num_Sites]], columns=['Age','Total_Purchase','Account_Manager','Years','Num_Sites']))
